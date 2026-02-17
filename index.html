@@ -235,16 +235,30 @@
       </footer>
     </main>
 
-     <dialog id="product_modal" class="modal">
-        <div class="modal-box">
-            <div id="details-container"></div>
-          <div class="modal-action">
-            <form method="dialog">
-              <button class="btn">Close</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
+    <dialog id="product_modal" class="modal">
+  <div class="modal-box">
+    
+    <!-- Product Details -->
+    <div id="details-container" class="mb-6"></div>
+
+    <!-- Action Buttons -->
+    <div class="modal-action flex justify-between items-center">
+
+      <!-- Buy Now Button -->
+      <button  
+        class="btn btn-primary px-6">
+        Buy Now
+      </button>
+
+      <!-- Close Button -->
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+
+    </div>
+  </div>
+</dialog>
+
 
 
 
