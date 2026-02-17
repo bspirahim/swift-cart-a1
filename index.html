@@ -31,52 +31,29 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav>
-      <div class="navbar bg-base-100 shadow-sm px-4">
-        <!-- LEFT -->
-        <div class="navbar-start">
-          <!-- Mobile Dropdown -->
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              <li><a href="index.html">Home</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
+   <nav class="bg-base-100 shadow-sm">
+  <div class="container mx-auto px-6">
+    <div class="navbar p-0">
+      
+      <!-- LEFT -->
+      <div class="navbar-start">
+        <!-- Mobile Dropdown -->
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
           </div>
 
-          <!-- Logo -->
-          <a
-            href="index.html"
-            class="btn btn-ghost text-xl font-bold text-primary"
-          >
-            SwiftCart
-          </a>
-        </div>
-
-        <!-- CENTER (Desktop Menu) -->
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1 font-medium">
+          <ul tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="about.html">About</a></li>
@@ -84,18 +61,38 @@
           </ul>
         </div>
 
-        <!-- RIGHT -->
-        <div class="navbar-end gap-3">
-          <!-- Cart Icon -->
-          <a href="cart.html" class="btn btn-ghost btn-circle">
-            <i class="fa-solid fa-cart-shopping text-lg"></i>
-          </a>
-
-          <!-- Login Button -->
-          <a href="login.html" class="btn btn-primary"> Login </a>
-        </div>
+        <!-- Logo -->
+        <a href="index.html"
+          class="btn btn-ghost text-xl font-bold text-primary">
+          SwiftCart
+        </a>
       </div>
-    </nav>
+
+      <!-- CENTER -->
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 font-medium">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="navbar-end gap-3">
+        <a href="cart.html" class="btn btn-ghost btn-circle">
+          <i class="fa-solid fa-cart-shopping text-lg"></i>
+        </a>
+
+        <a href="login.html" class="btn btn-primary">
+          Login
+        </a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
 
     <main>
       <!-- HERO SECTION -->
@@ -179,83 +176,8 @@
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold mb-10">Trending Now</h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Product Card -->
-            <div class="card bg-base-100 shadow-md">
-              <figure class="p-6">
-                <img
-                  src="https://i.ibb.co/3s7q5nP/backpack.png"
-                  alt="Backpack"
-                  class="h-60 object-contain"
-                />
-              </figure>
-              <div class="card-body">
-                <div class="flex justify-between items-center">
-                  <span class="badge badge-outline">Men's Clothing</span>
-                  <span class="text-yellow-500 text-sm"> ★ 3.9 (120) </span>
-                </div>
-                <h3 class="font-semibold text-lg">
-                  Fjallraven - Foldsack No. 1 Backpack
-                </h3>
-                <p class="font-bold text-lg">$109.95</p>
-
-                <div class="card-actions justify-between mt-4">
-                  <button class="btn btn-outline btn-sm">Details</button>
-                  <button class="btn btn-primary btn-sm">Add</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card -->
-            <div class="card bg-base-100 shadow-md">
-              <figure class="p-6">
-                <img
-                  src="https://i.ibb.co/Qd2nqzP/tshirt.png"
-                  alt="T-shirt"
-                  class="h-60 object-contain"
-                />
-              </figure>
-              <div class="card-body">
-                <div class="flex justify-between items-center">
-                  <span class="badge badge-outline">Men's Clothing</span>
-                  <span class="text-yellow-500 text-sm"> ★ 4.1 (259) </span>
-                </div>
-                <h3 class="font-semibold text-lg">
-                  Mens Casual Premium Slim Fit T-Shirts
-                </h3>
-                <p class="font-bold text-lg">$22.3</p>
-
-                <div class="card-actions justify-between mt-4">
-                  <button class="btn btn-outline btn-sm">Details</button>
-                  <button class="btn btn-primary btn-sm">Add</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card -->
-            <div class="card bg-base-100 shadow-md">
-              <figure class="p-6">
-                <img
-                  src="https://i.ibb.co/tYb2LxP/jacket.png"
-                  alt="Jacket"
-                  class="h-60 object-contain"
-                />
-              </figure>
-              <div class="card-body">
-                <div class="flex justify-between items-center">
-                  <span class="badge badge-outline">Men's Clothing</span>
-                  <span class="text-yellow-500 text-sm"> ★ 4.7 (500) </span>
-                </div>
-                <h3 class="font-semibold text-lg">Mens Cotton Jacket</h3>
-                <p class="font-bold text-lg">$55.99</p>
-
-                <div class="card-actions justify-between mt-4">
-                  <button class="btn btn-outline btn-sm">Details</button>
-                  <button class="btn btn-primary btn-sm">Add</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="top-rated-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+           
         </div>
       </section>
 
@@ -312,6 +234,17 @@
         </div>
       </footer>
     </main>
+
+     <dialog id="product_modal" class="modal">
+        <div class="modal-box">
+            <div id="details-container"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
 
 
 
