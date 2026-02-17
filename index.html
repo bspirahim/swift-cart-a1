@@ -32,8 +32,10 @@
   <body>
     <!-- navbar -->
     <nav>
-      <div class="navbar bg-base-100 shadow-sm">
+      <div class="navbar bg-base-100 shadow-sm px-4">
+        <!-- LEFT -->
         <div class="navbar-start">
+          <!-- Mobile Dropdown -->
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg
@@ -51,42 +53,68 @@
                 />
               </svg>
             </div>
+
             <ul
-              tabindex="-1"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li><a>Home</a></li>
-              <li><a>Product</a></li>
-              <li><a>About</a></li>
-              <li><a>Contact</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">SwiftCart</a>
+
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="btn btn-ghost text-xl font-bold text-primary"
+          >
+            SwiftCart
+          </a>
         </div>
+
+        <!-- CENTER (Desktop Menu) -->
         <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>Product</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
+          <ul class="menu menu-horizontal px-1 font-medium">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div class="navbar-end">
-          <a class="btn">Button</a>
+
+        <!-- RIGHT -->
+        <div class="navbar-end gap-3">
+          <!-- Cart Icon -->
+          <a href="cart.html" class="btn btn-ghost btn-circle">
+            <i class="fa-solid fa-cart-shopping text-lg"></i>
+          </a>
+
+          <!-- Login Button -->
+          <a href="login.html" class="btn btn-primary"> Login </a>
         </div>
       </div>
     </nav>
+
     <main>
       <!-- HERO SECTION -->
-      <section
-        class="relative h-[80vh] bg-cover bg-center flex items-center"
-        style="
-          background-image: url(&quot;/mnt/data/home-page- desktop-view.png&quot;);
-        "
-      >
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/60"></div>
+      <section class="relative h-[80vh] flex items-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+          <img
+            src="/assets/banner-image.png"
+            class="w-full h-full object-cover"
+            alt="Hero"
+          />
+        </div>
 
+        <!-- Gradient Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"
+        ></div>
+
+        <!-- Content -->
         <div class="relative container mx-auto px-6 text-white max-w-2xl">
           <h1 class="text-4xl lg:text-5xl font-bold mb-4">
             Best Collection For You

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift-cart</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind + daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="navbar bg-base-100 shadow-sm px-4">
+        <!-- LEFT -->
+        <div class="navbar-start">
+          <!-- Mobile Dropdown -->
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="btn btn-ghost text-xl font-bold text-primary"
+          >
+            SwiftCart
+          </a>
+        </div>
+
+        <!-- CENTER (Desktop Menu) -->
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 font-medium">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="navbar-end gap-3">
+          <!-- Cart Icon -->
+          <a href="cart.html" class="btn btn-ghost btn-circle">
+            <i class="fa-solid fa-cart-shopping text-lg"></i>
+          </a>
+
+          <!-- Login Button -->
+          <a href="login.html" class="btn btn-primary"> Login </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="text-center py-12">
+        <h1 class="text-3xl font-bold mb-6">Our Products</h1>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap justify-center gap-3">
+          <button class="btn btn-primary btn-sm rounded-full px-6">All</button>
+          <button class="btn btn-outline btn-sm rounded-full px-6">
+            Electronics
+          </button>
+          <button class="btn btn-outline btn-sm rounded-full px-6">
+            Jewelery
+          </button>
+          <button class="btn btn-outline btn-sm rounded-full px-6">
+            Men's Clothing
+          </button>
+          <button class="btn btn-outline btn-sm rounded-full px-6">
+            Women's Clothing
+          </button>
+        </div>
+      </section>
+
+      <!-- Products Grid -->
+      <section class="max-w-7xl mx-auto px-8 pb-16">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        >
+          <!-- Product Card -->
+          <div
+            class="card bg-white shadow-sm hover:shadow-lg transition rounded-xl"
+          >
+            <figure class="p-6 bg-gray-100 rounded-t-xl">
+              <img
+                src="https://via.placeholder.com/250"
+                class="h-48 object-contain"
+              />
+            </figure>
+
+            <div class="card-body p-5">
+              <span
+                class="text-xs bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full w-fit"
+              >
+                Men's Clothing
+              </span>
+
+              <h2 class="font-semibold text-sm mt-2 leading-snug">
+                Mens Casual Premium Slim Fit T-Shirts
+              </h2>
+
+              <div class="flex items-center text-sm mt-2">
+                <span class="text-yellow-500">★</span>
+                <span class="ml-1 font-medium">4.1</span>
+                <span class="text-gray-400 ml-1">(259)</span>
+              </div>
+
+              <p class="font-bold text-lg mt-2">$22.99</p>
+
+              <div class="flex justify-between mt-4">
+                <button class="btn btn-sm btn-outline px-4">Details</button>
+                <button
+                  class="btn btn-sm bg-indigo-600 hover:bg-indigo-700 text-white border-none px-5"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate this block for more products -->
+          <!-- Example Second Card -->
+
+          <div
+            class="card bg-white shadow-sm hover:shadow-lg transition rounded-xl"
+          >
+            <figure class="p-6 bg-gray-100 rounded-t-xl">
+              <img
+                src="https://via.placeholder.com/250"
+                class="h-48 object-contain"
+              />
+            </figure>
+            <div class="card-body p-5">
+              <span
+                class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full w-fit"
+              >
+                Electronics
+              </span>
+              <h2 class="font-semibold text-sm mt-2">
+                WD 2TB Elements Portable Hard Drive
+              </h2>
+              <div class="flex items-center text-sm mt-2">
+                <span class="text-yellow-500">★</span>
+                <span class="ml-1 font-medium">3.3</span>
+                <span class="text-gray-400 ml-1">(203)</span>
+              </div>
+              <p class="font-bold text-lg mt-2">$64</p>
+              <div class="flex justify-between mt-4">
+                <button class="btn btn-sm btn-outline px-4">Details</button>
+                <button
+                  class="btn btn-sm bg-indigo-600 hover:bg-indigo-700 text-white border-none px-5"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="bg-neutral text-neutral-content py-12">
+        <div
+          class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-3">SwiftCart</h3>
+            <p class="text-sm">
+              Your one-stop shop for fashion and lifestyle needs. Quality
+              products, fast delivery, and excellent support.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a class="link link-hover">Home</a></li>
+              <li><a class="link link-hover">Products</a></li>
+              <li><a class="link link-hover">About</a></li>
+              <li><a class="link link-hover">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3">Support</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a class="link link-hover">FAQ</a></li>
+              <li><a class="link link-hover">Shipping</a></li>
+              <li><a class="link link-hover">Returns</a></li>
+              <li><a class="link link-hover">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3">Subscribe</h4>
+            <div class="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="input input-bordered w-full"
+              />
+              <button class="btn btn-primary">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-center text-sm mt-10 border-t border-neutral-content/20 pt-6"
+        >
+          © 2025 SwiftCart. All rights reserved.
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
