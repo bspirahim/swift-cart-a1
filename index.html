@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift-cart</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind + daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Home</a></li>
+              <li><a>Product</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>Product</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Button</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- HERO SECTION -->
+      <section
+        class="relative h-[80vh] bg-cover bg-center flex items-center"
+        style="
+          background-image: url(&quot;/mnt/data/home-page- desktop-view.png&quot;);
+        "
+      >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative container mx-auto px-6 text-white max-w-2xl">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+            Best Collection For You
+          </h1>
+          <p class="text-lg text-gray-200 mb-6">
+            Discover the latest trends in fashion, electronics, and more. Shop
+            with confidence and style at SwiftCart.
+          </p>
+          <button class="btn btn-primary px-8">Shop Now</button>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="py-16 bg-base-200">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-2">Why Choose Us</h2>
+          <p class="text-gray-500 mb-12">
+            We provide the best shopping experience with top-notch services.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card bg-base-100 shadow-md p-6 text-center">
+              <i class="fa-solid fa-truck-fast text-3xl text-primary mb-4"></i>
+              <h3 class="font-semibold text-lg mb-2">Fast Delivery</h3>
+              <p class="text-sm text-gray-500">
+                Get your orders delivered to your doorstep quickly and
+                efficiently.
+              </p>
+            </div>
+
+            <div class="card bg-base-100 shadow-md p-6 text-center">
+              <i class="fa-solid fa-headphones text-3xl text-primary mb-4"></i>
+              <h3 class="font-semibold text-lg mb-2">24/7 Support</h3>
+              <p class="text-sm text-gray-500">
+                Our support team is available around the clock to assist you.
+              </p>
+            </div>
+
+            <div class="card bg-base-100 shadow-md p-6 text-center">
+              <i
+                class="fa-solid fa-shield-halved text-3xl text-primary mb-4"
+              ></i>
+              <h3 class="font-semibold text-lg mb-2">Secure Payment</h3>
+              <p class="text-sm text-gray-500">
+                Experience safe and secure transactions with encrypted systems.
+              </p>
+            </div>
+
+            <div class="card bg-base-100 shadow-md p-6 text-center">
+              <i class="fa-solid fa-rotate text-3xl text-primary mb-4"></i>
+              <h3 class="font-semibold text-lg mb-2">Easy Returns</h3>
+              <p class="text-sm text-gray-500">
+                Not satisfied? Return your products easily within 30 days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRENDING PRODUCTS -->
+      <section class="py-16">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-10">Trending Now</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product Card -->
+            <div class="card bg-base-100 shadow-md">
+              <figure class="p-6">
+                <img
+                  src="https://i.ibb.co/3s7q5nP/backpack.png"
+                  alt="Backpack"
+                  class="h-60 object-contain"
+                />
+              </figure>
+              <div class="card-body">
+                <div class="flex justify-between items-center">
+                  <span class="badge badge-outline">Men's Clothing</span>
+                  <span class="text-yellow-500 text-sm"> ★ 3.9 (120) </span>
+                </div>
+                <h3 class="font-semibold text-lg">
+                  Fjallraven - Foldsack No. 1 Backpack
+                </h3>
+                <p class="font-bold text-lg">$109.95</p>
+
+                <div class="card-actions justify-between mt-4">
+                  <button class="btn btn-outline btn-sm">Details</button>
+                  <button class="btn btn-primary btn-sm">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="card bg-base-100 shadow-md">
+              <figure class="p-6">
+                <img
+                  src="https://i.ibb.co/Qd2nqzP/tshirt.png"
+                  alt="T-shirt"
+                  class="h-60 object-contain"
+                />
+              </figure>
+              <div class="card-body">
+                <div class="flex justify-between items-center">
+                  <span class="badge badge-outline">Men's Clothing</span>
+                  <span class="text-yellow-500 text-sm"> ★ 4.1 (259) </span>
+                </div>
+                <h3 class="font-semibold text-lg">
+                  Mens Casual Premium Slim Fit T-Shirts
+                </h3>
+                <p class="font-bold text-lg">$22.3</p>
+
+                <div class="card-actions justify-between mt-4">
+                  <button class="btn btn-outline btn-sm">Details</button>
+                  <button class="btn btn-primary btn-sm">Add</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card -->
+            <div class="card bg-base-100 shadow-md">
+              <figure class="p-6">
+                <img
+                  src="https://i.ibb.co/tYb2LxP/jacket.png"
+                  alt="Jacket"
+                  class="h-60 object-contain"
+                />
+              </figure>
+              <div class="card-body">
+                <div class="flex justify-between items-center">
+                  <span class="badge badge-outline">Men's Clothing</span>
+                  <span class="text-yellow-500 text-sm"> ★ 4.7 (500) </span>
+                </div>
+                <h3 class="font-semibold text-lg">Mens Cotton Jacket</h3>
+                <p class="font-bold text-lg">$55.99</p>
+
+                <div class="card-actions justify-between mt-4">
+                  <button class="btn btn-outline btn-sm">Details</button>
+                  <button class="btn btn-primary btn-sm">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="bg-neutral text-neutral-content py-12">
+        <div
+          class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-3">SwiftCart</h3>
+            <p class="text-sm">
+              Your one-stop shop for fashion and lifestyle needs. Quality
+              products, fast delivery, and excellent support.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a class="link link-hover">Home</a></li>
+              <li><a class="link link-hover">Products</a></li>
+              <li><a class="link link-hover">About</a></li>
+              <li><a class="link link-hover">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3">Support</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a class="link link-hover">FAQ</a></li>
+              <li><a class="link link-hover">Shipping</a></li>
+              <li><a class="link link-hover">Returns</a></li>
+              <li><a class="link link-hover">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3">Subscribe</h4>
+            <div class="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="input input-bordered w-full"
+              />
+              <button class="btn btn-primary">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-center text-sm mt-10 border-t border-neutral-content/20 pt-6"
+        >
+          © 2025 SwiftCart. All rights reserved.
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
